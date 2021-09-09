@@ -1,10 +1,8 @@
 
 
 def spellchecker(sentence)
-  wordbank = ["correct"]
-  if sentence != wordbank[0]
-    "~#{sentence}~"
-  else 
-    sentence
+  wordbank = ["test1", "test2"]
+  if sentence != wordbank
+  sentence
   end
 end
