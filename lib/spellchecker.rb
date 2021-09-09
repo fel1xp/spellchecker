@@ -1,12 +1,13 @@
 
 
 def spellchecker(sentence)
-  wordbank = ["test1", "test2"]
+  wordbank = ["test1", "test2, test3"]
   sentence_array = sentence.split(" ")
-  if sentence == wordbank[0]
-    sentence
-  elsif wordbank == sentence_array
-    return sentence
-  end
+ 
+  if sentence_array.any? {|word| wordbank.include?(word) } == true
+  sentence
+end
+
 
 end
+
