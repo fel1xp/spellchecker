@@ -22,6 +22,11 @@ describe 'spellchecker for incorrectly spelt words' do
   it 'will return 2 words with ~...~ when spelt incorrectly' do
     expect(spellchecker('incorrecttest1 incorrecttest2')).to eq('~incorrecttest1~ ~incorrecttest2~')
   end
+
+  it 'will return 3 words with ~...~ when spelt incorrectly' do
+    expect(spellchecker('incorrecttest1 incorrecttest2 incorrecttest3')).to eq('~incorrecttest1~ ~incorrecttest2~ ~incorrecttest3~')
+  end
+
 end
 
 
