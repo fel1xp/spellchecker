@@ -29,5 +29,12 @@ describe 'spellchecker for incorrectly spelt words' do
 
 end
 
+describe 'spellchecker returns correctly and incorrectly words together' do 
+  it 'will return the correct word and the flagged word' do 
+    expect(spellchecker("test1 incorrecttest1")).to eq('test1 ~incorrecttest1~')
+  end
+end
+
+
 
 
