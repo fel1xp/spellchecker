@@ -33,6 +33,13 @@ describe 'spellchecker returns correctly and incorrectly words together' do
   it 'will return the correct word and the flagged word' do 
     expect(spellchecker("test1 incorrecttest1")).to eq('test1 ~incorrecttest1~')
   end
+  it 'will return 2 correct words and the flagged word' do 
+    expect(spellchecker("test1 incorrecttest1 test2")).to eq('test1 ~incorrecttest1~ test2')
+  end
+  it 'will return correct word and 2 flagged incorrect words' do 
+    expect(spellchecker("test1 incorrecttest1 incorrecttest2")).to eq('test1 ~incorrecttest1~ ~incorrecttest2~')
+  end
+
 end
 
 
