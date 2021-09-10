@@ -1,18 +1,15 @@
-
-
 def spellchecker(sentence)
   wordbank = ["test1", "test2", "test3", "test4", "test5"]
-  sentence_array = sentence.split(" ")
-  incorrect_array = []
-  final_array = []
+  split_sentence_array = sentence.split(" ")
+  spellchecked = []
 
-  sentence_array.each {|word| 
+  split_sentence_array.each {|word| 
     if wordbank.include?(word) == true
-      final_array.push(word)
-    elsif wordbank.include?(word) == false 
-      final_array.push("~#{word}~")
+      spellchecked.push(word)
+    else
+      spellchecked.push("~#{word}~")
     end
   }
-  final_array.join(" ")
+  spellchecked.join(" ")
 end
 
