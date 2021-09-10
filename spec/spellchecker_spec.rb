@@ -18,6 +18,10 @@ describe 'spellchecker for incorrectly spelt words' do
   it 'will return the string with ~...~ if spelt incorrectly' do
     expect(spellchecker('incorrecttest1')).to eq('~incorrecttest1~')
   end
+
+  it 'will return 2 words with ~...~ when spelt incorrectly' do
+    expect(spellchecker('incorrecttest1 incorrecttest2')).to eq('~incorrecttest1~ ~incorrecttest2~')
+  end
 end
 
 
